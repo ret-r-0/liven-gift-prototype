@@ -1,0 +1,9 @@
+{
+  "name": "november-room",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Advent-style monthly calendar with a growing scene, plus a thought disposal page",
+  "scripts": {
+    "dev": "npx --yes serve@14.2.4 . -l 3000"
+  }
+}

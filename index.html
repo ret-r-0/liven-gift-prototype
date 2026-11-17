@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#16283c">
+<title>November Room</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div>
+      <!-- placeholder wordmark: swap for the official Liven logo SVG -->
+      <span class="brand">liven</span>
+      <p class="hello">Your November gift</p>
+    </div>
+    <div class="streak" id="streak" title="Things in your room">
+      <span id="cnt">0</span>
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M13.5 2.5 5 13.5h5.5l-1 8L19 10h-6z" fill="#ffc533" stroke="#ffc533" stroke-width="1.6" stroke-linejoin="round"/></svg>
+    </div>
+  </header>
+
+  <nav class="tabs" aria-label="Sections">
+    <a href="#room" id="tab-room">
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11z"/><path d="M12 20c-2.2 0-3.5-1.4-3.5-3.2 0-2 1.8-2.8 2.2-4.8 1.2.8 1.9 1.8 1.9 2.9.6-.3 1-.8 1.2-1.4 1 .9 1.7 2 1.7 3.3 0 1.8-1.3 3.2-3.5 3.2z"/></svg>
+      The room
+    </a>
+    <a href="#disposal" id="tab-disposal">
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 4c-7 0-12 4-13 11l-3 5"/><path d="M20 4c0 6-3 11-9 12H7"/><path d="M14 9l-5 6"/></svg>
+      Let go
+    </a>
+  </nav>
+
+  <!-- ================= ROOM ================= -->
+  <section class="view" id="view-room">
+    <div class="card hero">
+      <h1>Your November room is filling up</h1>
+      <p class="muted"><span id="cnt2">0</span> of 30 things moved in</p>
+      <div class="bar" id="bar" role="progressbar" aria-label="Things in the room" aria-valuemin="0" aria-valuemax="30"><i id="barfill"></i></div>
+    </div>
+
+    <div class="scene" id="scene">
+      <svg viewBox="0 0 360 300" role="img" aria-label="A room with a fireplace that fills up as you complete days">
+        <defs>
+          <radialGradient id="gw" cx="152" cy="185" r="230" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#ff8a3d" stop-opacity=".6"/>
+            <stop offset=".45" stop-color="#ff8a3d" stop-opacity=".16"/>
+            <stop offset="1" stop-color="#ff8a3d" stop-opacity="0"/>
+          </radialGradient>
+          <clipPath id="wc"><rect x="16" y="40" width="58" height="88"/></clipPath>
+        </defs>
+        <!-- shell -->
+        <rect width="360" height="212" fill="#2a1f2e"/>
+        <rect y="206" width="360" height="6" fill="#201723"/>
+        <rect y="212" width="360" height="88" fill="#33242a"/>
+        <g stroke="#2b1e24" stroke-width="1"><path d="M0 236h360M0 262h360M0 286h360M70 212v24M200 212v24M300 212v24M130 236v26M250 236v26M40 262v24M180 262v24M320 262v24"/></g>
+        <!-- window -->
+        <rect x="14" y="38" width="62" height="92" rx="4" fill="#141a33" stroke="#4a3a4e" stroke-width="4"/>
+        <g clip-path="url(#wc)">
+          <g class="it" data-n="23" fill="#f3e9d8"><circle class="tw" cx="24" cy="50" r="1.3"/><circle class="tw" cx="35" cy="66" r="1"/><circle class="tw" cx="27" cy="102" r="1.2"/><circle class="tw" cx="66" cy="98" r="1"/><circle class="tw" cx="52" cy="114" r="1.3"/><circle class="tw" cx="38" cy="46" r="1"/><circle class="tw" cx="68" cy="76" r="1.1"/></g>
+          <g class="it" data-n="10"><circle cx="58" cy="58" r="9" fill="#f3e9d8"/><circle cx="62" cy="55" r="8" fill="#141a33"/></g>
+          <g class="it" data-n="15"><ellipse class="fall" cx="26" cy="38" rx="4" ry="2" fill="#e07a2f"/><ellipse class="fall" cx="42" cy="38" rx="3.5" ry="2" fill="#d6455a"/><ellipse class="fall" cx="60" cy="38" rx="4" ry="2" fill="#d9a066"/><ellipse class="fall" cx="68" cy="38" rx="3" ry="1.8" fill="#e07a2f"/></g>
+          <g class="it" data-n="29" fill="#fff"><circle class="fall" cx="22" cy="38" r="1.6"/><circle class="fall" cx="34" cy="38" r="1.2"/><circle class="fall" cx="48" cy="38" r="1.7"/><circle class="fall" cx="56" cy="38" r="1.2"/><circle class="fall" cx="66" cy="38" r="1.5"/><circle class="fall" cx="72" cy="38" r="1.1"/></g>
+        </g>
+        <path d="M45 38v92M14 84h62" stroke="#4a3a4e" stroke-width="3"/>
+        <rect x="10" y="129" width="70" height="5" rx="2" fill="#4a3a4e"/>
+        <!-- wall things -->
+        <g class="it" data-n="20"><circle cx="320" cy="72" r="16" fill="none" stroke="#5b8f6a" stroke-width="7" stroke-dasharray="6 2"/><circle cx="308" cy="62" r="2.6" fill="#d6455a"/><circle cx="333" cy="68" r="2.6" fill="#d6455a"/><circle cx="314" cy="86" r="2.6" fill="#d6455a"/><path d="M320 86l-7 12 7-4 7 4z" fill="#d6455a"/></g>
+        <g class="it" data-n="13"><rect x="130" y="38" width="44" height="34" rx="2" fill="#1b1422" stroke="#d9a066" stroke-width="3"/><path d="M134 68l12-15 8 8 6-6 10 13z" fill="#4b7d73"/><circle cx="162" cy="48" r="4" fill="#ffd28a"/></g>
+        <!-- fireplace -->
+        <rect x="100" y="100" width="104" height="112" fill="#4a3840"/>
+        <path d="M118 212V150a34 34 0 0 1 68 0v62z" fill="#0f0b10"/>
+        <rect x="92" y="92" width="120" height="10" rx="2" fill="#5c4650"/>
+        <rect x="94" y="210" width="116" height="6" fill="#5c4650"/>
+        <g class="it" data-n="1"><rect x="130" y="198" width="44" height="9" rx="4.5" fill="#6b4530"/><rect x="135" y="190" width="34" height="9" rx="4.5" fill="#7a5237" transform="rotate(-8 152 194)"/><circle cx="134" cy="202.5" r="3" fill="#8a6244"/></g>
+        <g class="it" data-n="2"><path class="flame" d="M152 174C159 182 161 188 152 193 143 188 145 182 152 174Z" fill="#ff8a3d"/></g>
+        <g class="it" data-n="5"><path class="flame" d="M152 158C166 172 169 184 152 194 135 184 138 172 152 158Z" fill="#ff8a3d"/><path class="flame b" d="M140 172C146 180 146 188 139 193 132 188 134 180 140 172Z" fill="#ffb155"/><path class="flame b" d="M164 172C170 180 172 188 165 193 158 188 158 180 164 172Z" fill="#ffb155"/></g>
+        <g class="it" data-n="18"><path class="flame" d="M152 138C172 158 176 178 152 195 128 178 132 158 152 138Z" fill="#ff7a2a"/><path class="flame b" d="M134 158C143 170 144 184 133 194 122 184 125 170 134 158Z" fill="#ff8a3d"/><path class="flame b" d="M170 158C179 170 182 184 171 194 160 184 161 170 170 158Z" fill="#ff8a3d"/><path class="flame b" d="M152 160C162 172 163 184 152 193 141 184 142 172 152 160Z" fill="#ffe2a8"/></g>
+        <g class="it" data-n="30" fill="#ffd28a"><circle class="rise" cx="140" cy="150" r="1.6"/><circle class="rise" cx="152" cy="140" r="1.3"/><circle class="rise" cx="164" cy="152" r="1.6"/><circle class="rise" cx="146" cy="132" r="1.2"/><circle class="rise" cx="158" cy="128" r="1.4"/></g>
+        <!-- mantel -->
+        <g class="it" data-n="12"><path d="M94 104q14 12 29 0 14 12 29 0 14 12 29 0 14 12 29 0" fill="none" stroke="#6b5a6e" stroke-width="1.5"/><g fill="#6b5a6e"><circle cx="108" cy="110" r="2.6"/><circle cx="123" cy="104.5" r="2.6"/><circle cx="137" cy="110" r="2.6"/><circle cx="152" cy="104.5" r="2.6"/><circle cx="166" cy="110" r="2.6"/><circle cx="181" cy="104.5" r="2.6"/><circle cx="195" cy="110" r="2.6"/></g></g>
+        <g class="it" data-n="26"><circle class="tw" cx="108" cy="110" r="3" fill="#ffd28a"/><circle class="tw" cx="123" cy="104.5" r="3" fill="#d6455a"/><circle class="tw" cx="137" cy="110" r="3" fill="#ff8a3d"/><circle class="tw" cx="152" cy="104.5" r="3" fill="#ffd28a"/><circle class="tw" cx="166" cy="110" r="3" fill="#d6455a"/><circle class="tw" cx="181" cy="104.5" r="3" fill="#ff8a3d"/><circle class="tw" cx="195" cy="110" r="3" fill="#ffd28a"/></g>
+        <g class="it" data-n="7"><circle cx="103.5" cy="71" r="11" fill="#ffd28a" opacity=".18"/><rect x="100" y="76" width="7" height="16" fill="#f3e9d8"/><ellipse class="flame" cx="103.5" cy="71" rx="3" ry="5" fill="#ffd28a"/></g>
+        <g class="it" data-n="16"><circle cx="113" cy="78" r="8" fill="#ffd28a" opacity=".18"/><rect x="110" y="82" width="6" height="10" fill="#f3e9d8"/><ellipse class="flame b" cx="113" cy="78" rx="2.5" ry="4" fill="#ffd28a"/></g>
+        <g class="it" data-n="25"><circle cx="146" cy="82" r="5" fill="#f39a3b"/><circle cx="154" cy="80" r="5" fill="#ffab4d"/><circle cx="161" cy="82" r="5" fill="#f39a3b"/><path d="M138 84h30q-2 8-15 8t-15-8z" fill="#6b8fa3"/></g>
+        <g class="it" data-n="22"><rect x="184" y="89" width="16" height="3" fill="#8a6244"/><circle cx="192" cy="80" r="11" fill="#d9a066"/><circle cx="192" cy="80" r="8" fill="#f3e9d8"/><path d="M192 80v-6M192 80l4 2" stroke="#2b2030" stroke-width="1.5" stroke-linecap="round"/></g>
+        <!-- floor -->
+        <g class="it" data-n="3"><ellipse cx="176" cy="254" rx="130" ry="30" fill="#7b3147"/><ellipse cx="176" cy="254" rx="108" ry="22" fill="none" stroke="#d9a066" stroke-width="2" stroke-dasharray="5 5"/></g>
+        <g class="it" data-n="9"><rect x="30" y="204" width="34" height="7" fill="#d9a066"/><rect x="33" y="197" width="30" height="7" fill="#4b7d73"/><rect x="31" y="190" width="32" height="7" fill="#d6455a"/></g>
+        <g class="it" data-n="27"><rect x="36" y="174" width="22" height="16" rx="3" fill="#6b4a3a"/><circle cx="43" cy="182" r="4" fill="#2b2030"/><circle cx="53" cy="180" r="2" fill="#ffd28a"/><path d="M56 174l6-12" stroke="#b9a9c9" stroke-width="1.2"/><g fill="#ffd28a" font-size="12"><text class="rise" x="64" y="172">♪</text><text class="rise" x="70" y="160">♫</text></g></g>
+        <g class="it" data-n="14"><ellipse cx="79" cy="180" rx="5" ry="16" fill="#5b8f6a"/><ellipse cx="71" cy="184" rx="4" ry="13" fill="#4f7f5d" transform="rotate(-25 71 184)"/><ellipse cx="87" cy="184" rx="4" ry="13" fill="#4f7f5d" transform="rotate(25 87 184)"/><path d="M70 196h18l-3 16H73z" fill="#b5653f"/></g>
+        <g class="it" data-n="24"><rect x="211.5" y="192" width="3" height="5" fill="#5b8f6a"/><ellipse cx="213" cy="204" rx="10" ry="8" fill="#e07a2f"/><ellipse cx="213" cy="204" rx="5" ry="8" fill="#ef9441"/></g>
+        <!-- armchair -->
+        <g class="it" data-n="4"><rect x="234" y="208" width="6" height="12" fill="#55392c"/><rect x="296" y="208" width="6" height="12" fill="#55392c"/><rect x="236" y="138" width="64" height="62" rx="16" fill="#3f6b63"/><rect x="230" y="180" width="76" height="30" rx="10" fill="#4b7d73"/><rect x="224" y="168" width="16" height="44" rx="8" fill="#3f6b63"/><rect x="296" y="168" width="16" height="44" rx="8" fill="#3f6b63"/></g>
+        <g class="it" data-n="8"><path d="M222 166h20v42q-10 6-20 0z" fill="#d6455a"/><path d="M222 178h20M222 190h20M222 202h20" stroke="#f3e9d8" stroke-width="1.5" opacity=".7"/></g>
+        <g class="it" data-n="6"><ellipse cx="334" cy="217" rx="10" ry="3" fill="#55392c"/><rect x="332" y="186" width="4" height="31" fill="#55392c"/><ellipse cx="334" cy="186" rx="20" ry="5" fill="#6b4a3a"/><circle cx="342" cy="177" r="4" fill="none" stroke="#f3e9d8" stroke-width="2"/><rect x="326" y="170" width="14" height="14" rx="3" fill="#f3e9d8"/></g>
+        <g class="it" data-n="19" fill="none" stroke="#b9a9c9" stroke-width="1.5" stroke-linecap="round"><path class="rise" d="M330 166q-3-5 0-9t0-9"/><path class="rise" d="M337 166q-3-5 0-9t0-9"/></g>
+        <g class="it" data-n="17"><ellipse cx="252" cy="236" rx="10" ry="5" fill="#d6455a"/><ellipse cx="246" cy="235" rx="5" ry="4" fill="#f3e9d8"/><ellipse cx="276" cy="239" rx="10" ry="5" fill="#d6455a"/><ellipse cx="270" cy="238" rx="5" ry="4" fill="#f3e9d8"/></g>
+        <g class="it" data-n="11"><path d="M142 250q15 2 10-11" fill="none" stroke="#d99b4f" stroke-width="5" stroke-linecap="round"/><ellipse cx="122" cy="249" rx="24" ry="12" fill="#e8b56b"/><circle cx="101" cy="247" r="9.5" fill="#e8b56b"/><path d="M93 242l1-9 6 5zM103 238l6-5 1 9z" fill="#e8b56b"/><path d="M96 248q2 2 4 0M103 248q2 2 4 0" fill="none" stroke="#2b2030" stroke-width="1.2" stroke-linecap="round"/></g>
+        <g class="it" data-n="28" fill="#f3e9d8" font-family="sans-serif" font-weight="700"><text class="rise" x="92" y="232" font-size="9">z</text><text class="rise" x="86" y="222" font-size="11">z</text><text class="rise" x="78" y="210" font-size="13">Z</text></g>
+        <g class="it" data-n="21"><circle cx="296" cy="244" r="8" fill="#4b7d73"/><circle cx="311" cy="243" r="7" fill="#d6455a"/><circle cx="303" cy="238" r="6" fill="#d9a066"/><path d="M286 246h34l-4 20h-26z" fill="#b08350"/><path d="M288 253h30M289 260h28" stroke="#8a6244" stroke-width="1.2"/></g>
+        <!-- light -->
+        <rect id="cold" width="360" height="300" fill="#0a1118" opacity=".5"/>
+        <rect id="warm" width="360" height="300" fill="url(#gw)" opacity="0" style="mix-blend-mode:screen"/>
+      </svg>
+      <div class="cap" aria-live="polite"><span id="cap">The room is cold. Light it up.</span></div>
+    </div>
+
+    <article class="card task" id="card"></article>
+
+    <div class="card">
+      <div class="cal" id="cal" aria-label="November 2026"></div>
+      <p class="small muted">Do them in any order, on any day. Nothing here is ever marked missed.</p>
+    </div>
+
+    <div class="next">
+      <b>Next month: December</b>
+      <span class="muted small">A bare tree and 31 ornaments. This room stays in your collection.</span>
+    </div>
+
+    <div class="proto">
+      <b class="small muted">Prototype controls</b>
+      <div class="row">
+        <button class="btn ghost sm" id="p-fill" type="button">See the finished room</button>
+        <button class="btn ghost sm" id="p-clear" type="button">Empty the room</button>
+      </div>
+      <label for="p-unlock"><input type="checkbox" id="p-unlock"> Unlock future days</label>
+      <p class="small muted">Progress is kept in this browser only. Seven days start filled in as sample progress.</p>
+    </div>
+  </section>
+
+  <!-- ================= DISPOSAL ================= -->
+  <section class="view" id="view-disposal">
+    <header class="dhead">
+      <h1>Thought disposal</h1>
+      <p class="muted">Write the thing that's bugging you. Choose how it leaves.</p>
+      <span class="tag">Let go</span>
+    </header>
+
+    <div class="stage" id="stage">
+      <div class="props" id="props"></div>
+      <div class="note empty" id="note">Your thought goes here</div>
+      <div class="result" id="result" aria-live="polite">
+        <div class="exhale" id="exhale" hidden><i></i><span>exhale</span></div>
+        <p id="rtext"></p>
+        <span class="muted small" id="rcount"></span>
+        <button class="btn sm" id="again" type="button">Another one</button>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div>
+        <label for="thought" class="small muted">What's bugging you?</label>
+        <textarea id="thought" maxlength="140" placeholder="I still haven't answered that email from Tuesday"></textarea>
+        <p class="small muted">Your words stay on this screen and are never saved or sent. This browser only keeps a scrambled fingerprint, so it can tell when a thought you already let go comes back.</p>
+      </div>
+      <fieldset>
+        <legend>GENTLY</legend>
+        <div class="chips">
+          <input type="radio" name="m" id="m-burn" value="burn" checked><label for="m-burn">Burn it</label>
+          <input type="radio" name="m" id="m-dissolve" value="dissolve"><label for="m-dissolve">Let it fade</label>
+          <input type="radio" name="m" id="m-plane" value="plane"><label for="m-plane">Paper plane</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>RIDICULOUSLY</legend>
+        <div class="chips">
+          <input type="radio" name="m" id="m-vacuum" value="vacuum"><label for="m-vacuum">Vacuum</label>
+          <input type="radio" name="m" id="m-shredder" value="shredder"><label for="m-shredder">Shredder</label>
+          <input type="radio" name="m" id="m-hole" value="hole"><label for="m-hole">Black hole</label>
+          <input type="radio" name="m" id="m-cat" value="cat"><label for="m-cat">Cat</label>
+          <input type="radio" name="m" id="m-monster" value="monster"><label for="m-monster">Feed the monster</label>
+          <input type="radio" name="m" id="m-any" value="any"><label for="m-any">Surprise me</label>
+        </div>
+      </fieldset>
+      <button class="btn" id="go" type="button">Get rid of it</button>
+      <p class="small muted">If things feel very heavy right now, you deserve more than a vacuum cleaner. <a class="help" href="https://findahelpline.com">Find someone to talk to</a>.</p>
+      <button class="linkbtn" id="p-forget" type="button">Prototype: forget every thought I've let go</button>
+    </div>
+  </section>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
